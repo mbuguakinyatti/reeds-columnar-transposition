@@ -6,7 +6,11 @@ def transposeEncrypt(custom_key, message):
     for col in range(key_length):
         currentIndex = col
         while currentIndex < message_length:
-            cipher_text[custom_key[col]] += message[currentIndex]
+            cipher_text[custom_key[col]% key_length] += message[currentIndex]
             currentIndex += key_length
 
-    return ''.join(cipher_text)
+
+    myString = ''  
+    for i in cipher_text:
+        myString += ' ' + i
+    return myString

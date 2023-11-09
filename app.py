@@ -22,10 +22,11 @@ def encrypt():
     # Check if the encryption key is too long
     encryption_key= encrypt_key
     length = len(encryption_key)
-    if length > 9:
+    print(encrypt_key)
+    if length <=3 and length > 9:
         return "Encryption Key must not exceed 9 characters."
 
-    encryption_key = [int(char) for char in encrypt_key]  # Store the key in the global variable
+    encryption_key = [ord(char) for char in encrypt_key]  # Store the key in the global variable
     cipher_text = transposeEncrypt(encryption_key, message)
     return render_template('result.html', original_message=message, custom_key=encrypt_key, cipher_text=cipher_text)
 
