@@ -2,20 +2,73 @@
 <html>
   <head>
     <title>Transposition Cipher Encryption</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 19px;
+      }
+      .mother-container{
+        background-color: rebeccapurple;
+        color: white;
+        border-radius: 20px;
+        width: 400px;
+        height: 50vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+      }
+      button{
+        padding: 10px;
+        border-radius: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+      }
+      button:hover{
+        cursor: pointer;
+        background-color: rgb(255, 213, 213);
+      }
+      input{
+        padding: 10px;
+        border-radius: 7px;
+        border: none;
+      }
+      span{
+        color: rebeccapurple;
+
+      }
+
+
+    </style>
   </head>
   <body>
-    <h1>Transposition Cipher Encryption</h1>
+    <h1>Transposition <span>Cipher Encryption</span> </h1>
     <form action="/encrypt" method="post">
-      <div>
-        <label for="message">Enter message:</label>
-        <input type="text" name="message" id="message" required /> <br />
+      <div class="mother-container">
+        <div class="container">
+          <label for="message">Enter message:</label>
+          <input type="text" name="message" id="message" required /> <br />
+        </div>
+        <div class="container">
+          <label for="encrypt_key">Encryption Key (maximum 9 characters):</label>
+
+          <input type="text" name="encrypt_key" id="encrypt_key" /> <br />
+        </div>
+        <div><button type="submit">Encrypt</button></div>
       </div>
-      <div>
-        <label for="encrypt_key">Encryption Key (maximum 9 characters):</label>
-        <br />
-        <input type="text" name="encrypt_key" id="encrypt_key" /> <br />
-      </div>
-      <div><button type="submit">Encrypt</button></div>
     </form>
   </body>
 </html>

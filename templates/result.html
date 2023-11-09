@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="algae.css">
     <title>Encryption Result</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 19px;
+      }
+      .mother-container{
+        background-color: rebeccapurple;
+        color: white;
+        border-radius: 20px;
+        width: 400px;
+        height: 50vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        background-color: rgba(255, 255, 255, 0.264);
+        padding: 15px;
+        border-radius: 6px;
+        width: 300px;
+      }
+      .answer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 4px;
+        width: 200px;
+
+      }
+
+
+      span{
+        color: rebeccapurple;
+
+      }
+      .inside{
+        color: white;
+        font-weight: 900;
+      }
+
+
+    </style>
   </head>
   <body>
-    <h1>Encryption Result</h1>
-    <p>Original Message: {{ original_message }}</p>
-    <p>Key: {{ custom_key }}</p>
-    <p>Cipher Text: {{ cipher_text }}</p>
+    <h1>Encryption <span>Result</span> </h1>
+    <div class="mother-container">
+      <div class="container" > <div class="inside" >Original Message</div> <div class="answer" >{{ original_message }} </div> </div>
+      <div class="container" > <div class="inside" >Key</div> <div class="answer" >{{ custom_key }}</div>  </div>
+      <div class="container" > <div class="inside" >Cipher Text</div> <div class="answer" >{{ cipher_text }}</div>  </div>
+    </div>
   </body>
 </html>
